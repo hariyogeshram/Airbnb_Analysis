@@ -110,7 +110,7 @@ if select == "Home":
 
 if select == "Data Exploration":
 
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["***PRICE ANALYSIS***","***AVAILABILITY ANALYSIS***","***LOCATION BASED***", "***GEOSPATIAL VISUALIZATION***", "***TOP CHARTS***"])
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["***PRICE ANALYSIS***","***AVAILABILITY ANALYSIS***","***LOCATION BASED***", "***GEOSPATIAL VISUALIZATION***", "***TOP CHARTS***", "***VISUALIZATION BY POWER BI***"])
 
     with tab1:
 
@@ -478,6 +478,19 @@ if select == "Data Exploration":
                                 hover_data= ["accommodates","bedrooms","beds","bed_type"])
 
         st.plotly_chart(fig_top_50_price_2)
+
+    with tab6:
+
+        # PowerBI Visualization
+        st.header("VISUALIZATION BY POWER BI")
+        st.write("---")
+        st.image(Image.open("D://Airbnb_Analysis//PowerBI.png"), width=1000)
+        st.write("---")
+
+        st.header("URL Link")
+        st.markdown("- [Click to view PowerBI Dashboard](https://app.fabric.microsoft.com/groups/me/reports/24b8422d-d364-4723-8703-0ef8bf175d9e/ReportSection?experience=power-bi link)")
+        st.write("---")
+
 
     
         
